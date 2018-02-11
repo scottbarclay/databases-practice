@@ -104,9 +104,9 @@ describe('#users', function() {
       users.createOne('catLady', 'Angela', 'Martin', (err, results) => {
         expect(err).to.be.null;
         db.query('SELECT * FROM users', (err, results) => {
-          expect(results[0]).to.have.property('username', 'catLady');
-          expect(results[0]).to.have.property('firstname', 'Angela');
-          expect(results[0]).to.have.property('lastname', 'Martin');
+          expect(results[4]).to.have.property('username', 'catLady');
+          expect(results[4]).to.have.property('firstname', 'Angela');
+          expect(results[4]).to.have.property('lastname', 'Martin');
           done();
         });
       });

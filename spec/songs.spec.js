@@ -78,8 +78,8 @@ describe('#songs', function() {
     it('should have all song columns', function(done) {
       songs.getAllByArtist('The Head and the Heart', (err, results) => {
         expect(results[0]).to.have.property('title');
-        expect(results).to.have.property('artist');
-        expect(results).to.have.property('id');
+        expect(results[0]).to.have.property('artist');
+        expect(results[0]).to.have.property('id');
         done();
       });
     });
@@ -98,8 +98,8 @@ describe('#songs', function() {
       songs.createOne('Angela', 'The Lumineers', (err, results) => {
         expect(err).to.be.null;
         db.query('SELECT * FROM songs', (err, results) => {
-          expect(results[0]).to.have.property('title', 'Angela');
-          expect(results[0]).to.have.property('artist', 'The Lumineers');
+          expect(results[3]).to.have.property('title', 'Angela');
+          expect(results[3]).to.have.property('artist', 'The Lumineers');
           done();
         });
       });

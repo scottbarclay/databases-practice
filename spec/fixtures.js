@@ -9,5 +9,5 @@ module.exports = {
     'INSERT INTO users (username, firstname, lastname) VALUES ("drawingGurl", "Pam", "Beesley");',
     'INSERT INTO users (username, firstname, lastname) VALUES ("mrsVance", "Phyllis", "Vance");',
     'INSERT INTO users (username, firstname, lastname) VALUES ("bbb", "Dwight", "Schrute");',
-  ]
+  ].join(' ')
 }
